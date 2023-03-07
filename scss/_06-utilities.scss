@@ -1,5 +1,5 @@
 $colors:(
-    "Primary": $clr-primary,
+    "primary": $clr-primary,
     "dark":$clr-black,
     "light":$clr-white,
     "gray": $clr-gray,
@@ -16,6 +16,10 @@ $colors:(
         color: $val;
         }
     }
+    .btn.bg--#{$key}{
+      @include btn($val);
+    }
+    
     
 }
 
@@ -66,5 +70,21 @@ $alignments: (
     &--#{$key} {
       align-items: $val;
     }
+  }
+}
+@for $i from 1 through 10{
+  .mb--#{$i}{
+      margin-bottom: $i + rem;
+  }
+}
+/*----margin top ----*/
+@for $i from 1 through 10{
+  .mt--#{$i}{
+      margin-top: $i + rem;
+  }
+}
+@for $i from 1 through 10{
+  .ml--#{$i}{
+      margin-left: $i + rem;
   }
 }
